@@ -1,4 +1,4 @@
-const website = process.argv.slice(2)
+const website = process.argv.slice(2);
 const fs = require('fs');
 
 
@@ -14,7 +14,7 @@ request(website[0], (error, response, body) => {
     if (err) throw err;
     const { size } = fs.statSync(website[1]);
     console.log(`Downloaded and save ${size} to ${website[1]}!`);
-  })
+  });
 
 });
 //process.argv
